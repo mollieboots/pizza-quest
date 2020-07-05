@@ -26,6 +26,6 @@ Player.prototype.characterClass = function () {
         this.charisma = 2
     } else if (this.characterClass === "Jock") {
         this.horsepower = 6
-  }
+    }
 }
 

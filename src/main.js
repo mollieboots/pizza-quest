@@ -14,11 +14,11 @@ $(document).ready(function() {
         player.assignCharacterClass();
         console.log(player);
         $('#player-input').hide();
-        $("#player").append(name)
-        $("#player-health").append(player.health)
-        $("#pizza-health").append(player.pizzaHealth)
+        $('#player').show();
+        $("#player-name").text(name);
+        $('#player-class').text(characterClass);
+        $("#player-health").text(player.health);
+        $("#player-pizza-health").text(player.pizzaHealth);
     })
-  
-  
 }); ;
 

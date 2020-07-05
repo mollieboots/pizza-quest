@@ -7,19 +7,17 @@ export function Player(name, characterClass, health, horsepower, charisma, pizza
     this.pizzaHealth = 20;
 }
 
-Player.prototype.takeDamage = function () {
-    let damage;
+Player.prototype.takeDamage = function (damage) {
     this.health -= damage;
     return this.health;
 }
 
 Player.prototype.takePizzaDamage = function () {
-    let pizzaDamage;
     this.pizzaHealth -= 5;
     return this.pizzaHealth;
 }
 
-Player.prototype.characterClass = function () {
+Player.prototype.assignCharacterClass = function () {
     if (this.characterClass === "Mechanic") {
         this.health = 25
     } else if (this.characterClass === "Cheerleader") {

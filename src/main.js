@@ -6,14 +6,17 @@ import './styles.css';
 import $ from 'jquery';
 
 $(document).ready(function() {
-    $('#game-start').submit(function(event) {
+    $('#player-input').submit(function(event) {
         event.preventDefault();
         let name = $('#name').val();
         let characterClass = $('#characterClass').val();
         let player = new Player(name, characterClass);
-        player.characterClass();
+        player.assignCharacterClass();
         console.log(player);
         $('#player-input').hide();
+        $("#player").append(name)
+        $("#player-health").append(player.health)
+        $("#pizza-health").append(player.pizzaHealth)
     })
   
   

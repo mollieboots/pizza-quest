@@ -27,6 +27,11 @@ describe('Player', () => {
         let player = new Player("Jan", "Cheerleader")
         expect(player.characterClass).toEqual('Cheerleader');
     });
+    test('should instantiate Player with characterClass Cheerleader and update player charisma to 2', () => {
+        let player = new Player("Jan", "Cheerleader");
+        player.assignCharacterClass()
+        expect(player.charisma).toEqual(2);
+    });
 });
 
 describe('Monster', () => {

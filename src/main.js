@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
 
+let monsters = [];
+let gremlin = new Monster("Gremlin", 7, 10, 1, 2, 1);
+let newGame = new Game();
 $(document).ready(function() {
     $('#player-input').submit(function(event) {
         event.preventDefault();
@@ -19,6 +22,6 @@ $(document).ready(function() {
         $('#player-class').text(characterClass);
         $("#player-health").text(player.health);
         $("#player-pizza-health").text(player.pizzaHealth);
-    })
-}); ;
+    });
+});
 

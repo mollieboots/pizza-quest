@@ -18,10 +18,23 @@ $(document).ready(function() {
         console.log(player);
         $('#player-input').hide();
         $('#player').show();
+        $('#gameplay').show();
         $("#player-name").text(name);
         $('#player-class').text(characterClass);
         $("#player-health").text(player.health);
         $("#player-pizza-health").text(player.pizzaHealth);
+    });
+
+    $('#attack').submit(function(event) {
+
+    });
+    
+    $('#throw-pizza').submit(function(event) {
+
+    });
+    
+    $('#run-away').submit(function(event) {
+
     });
 });
 

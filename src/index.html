@@ -1,39 +1,23 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Pizza Quest</title>
+
+    <title>Rpulette</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Pizza Quest</h1>
-    </div>
-    <div class="container">
-        <form id="player-input" class="form-group">
-            <input required="true" class="form-control" type="text" id="name" placeholder="Enter your name">
-            <select required="true" class="form-control" name="characterClass" id="characterClass">
-                <option value="Mechanic">Mechanic</option>
-                <option value="Cheerleader">Cheerleader</option>
-                <option value="Jock">Jock</option>
-            </select>
-            <button class="btn btn-primary" type="submit" id="game-start">Begin Game</button>
-        </form>
-        <div id="player">
-            <h5>Name: <span id="player-name"></span></h5>
-            <h5>Class: <span id="player-class"></span></h5>
-            <h5>Health: <span id="player-health"></span></h5>
-            <h5>Pizza Integrity: <span id="player-pizza-health"></span></h5>
-        </div>
-        <div id="player-health">
-    
-        </div>
-        <ul id="pizza-health">
-    
-        </ul>
-    </div>
+    <form id="roulette-form">
+        
+        <button type="submit">pull the trigger</button>
+    </form>
+
+    <ul id="solution"></ul>
+    <div id="win">
 
 
+    </div>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 import { Player } from './../src/player.js';
 import { Monster } from './../src/monsters.js';
+import { Game } from './../src/game.js'
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
@@ -33,15 +34,15 @@ $(document).ready(function() {
     });
 
     $('#attack').submit(function(event) {
-
+        event.preventDefault();
     });
     
     $('#throw-pizza').submit(function(event) {
-
+        event.preventDefault();
     });
 
     $('#run-away').submit(function(event) {
-
+        event.preventDefault();
     });
 });
 

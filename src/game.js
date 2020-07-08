@@ -10,9 +10,9 @@ export function Game(level, turns, result, player, monster) {
 }
 
 Game.prototype.checkLevel = function (level, monsters) {
-    for (i = 0; let i <= monsters.length; i++) {
+    for (let i = 0; i <= monsters.length; i++) {
         if (monsters[i].level == level) {
             return monsters[i];
-        }
-    }
-}
+        };
+    };
+};

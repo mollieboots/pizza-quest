@@ -8,8 +8,8 @@ let player = new Player("Jan", "Cheerleader", true);
 console.log(monster.checkHealth(), player.checkHealth());
 
 export function doAttack(player, monster) {
-  if (player.checkHealth() && monster.checkHealth()) {
-    console.log("jello");
+  if (player.checkHealth() == true && monster.checkHealth() == true) {
+    console.log("jello")
     player.doDamage(monster);
     monster.takeDamage();
   }
@@ -21,4 +21,3 @@ export function monstersTurn(player, monster) {
     player.takeDamage();
     player.checkHealth();
   }
-}

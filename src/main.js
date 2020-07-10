@@ -5,6 +5,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import $ from "jquery";
+import { monstersTurn, doAttack } from "./battle.js";
 
 let monsters = [];
 let gremlin = new Monster("Gremlin", 7, 10, 1, 2, 1);
@@ -35,18 +36,19 @@ $(document).ready(function () {
 
   $("#attack").submit(function (event) {
     event.preventDefault();
-    player.active != player.active; //To toggle player/monster turns
+    doAttack(player, monster);
+    monstersTurn(player, monster);
   });
 
   $("#throw-pizza").submit(function (event) {
     event.preventDefault();
     player.throwPizza(monster);
-    player.active != player.active; //To toggle player/monster turns
+    monstersTurn(player, monster);
   });
 
   $("#run-away").submit(function (event) {
     event.preventDefault();
     player.runAway(monster);
-    player.active != player.active; //To toggle player/monster turns
+    monstersTurn(player, monster);
   });
 });

@@ -1,6 +1,6 @@
 import { Monster } from "./monsters.js";
 
-console.log(monster.health);
+// console.log(monster.health);
 
 export function Player(name, characterClass, active) {
   this.name = name;
@@ -11,6 +11,8 @@ export function Player(name, characterClass, active) {
   this.charisma = 0;
   this.pizzaHealth = 20;
 }
+
+let monster = new Monster("Gremlin", 7, false, 100, 1, 2, 1);
 
 Player.prototype.diceRoll = function (max) {
   return Math.floor(Math.random() * Math.floor(max - 1) + 1);
@@ -38,14 +40,16 @@ Player.prototype.assignCharacterClass = function () {
 
 Player.prototype.doDamage = function (monster) {
   let damage = 0;
+  console.log(this);
   if (monster.ac <= this.diceRoll(20) + this.horsepower) {
+    console.log("YOU DID NOT MISS");
     damage += this.diceRoll(6);
-    console.log(damage);
-    return damage;
   } else {
     console.log("You missed!!");
     return "You missed!";
   }
+  this.active != this.active;
+  return damage;
 };
 
 Player.prototype.throwPizza = function (monster) {
@@ -66,7 +70,7 @@ Player.prototype.runAway = function (monster) {
 };
 
 Player.prototype.checkHealth = function () {
-  if (player.health > 0) {
+  if (this.health > 0) {
     return true;
   } else {
     return false;

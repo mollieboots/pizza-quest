@@ -35,15 +35,18 @@ $(document).ready(function () {
 
   $("#attack").submit(function (event) {
     event.preventDefault();
+    player.active != player.active; //To toggle player/monster turns
   });
 
   $("#throw-pizza").submit(function (event) {
     event.preventDefault();
     player.throwPizza(monster);
+    player.active != player.active; //To toggle player/monster turns
   });
 
   $("#run-away").submit(function (event) {
     event.preventDefault();
     player.runAway(monster);
+    player.active != player.active; //To toggle player/monster turns
   });
 });

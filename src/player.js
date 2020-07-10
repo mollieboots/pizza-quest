@@ -2,9 +2,10 @@ import { Monster } from "./monsters.js";
 
 console.log(monster.health);
 
-export function Player(name, characterClass) {
+export function Player(name, characterClass, active) {
   this.name = name;
   this.characterClass = characterClass;
+  this.active = active;
   this.health = 20;
   this.horsepower = 4;
   this.charisma = 0;

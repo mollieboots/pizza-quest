@@ -1,9 +1,9 @@
 import { Player } from "./../src/player.js";
 import { Monster } from "./../src/monsters.js";
 
-export function Game(level, turns, result, player, monster) {
+export function Game(level, active, result, player, monster) {
   this.level = 1;
-  this.turns = 0;
+  this.active = active;
   this.result = result;
   this.player = player;
   this.monster = monster;
@@ -25,3 +25,29 @@ Game.prototype.increaseLevel = function () {
 Game.prototype.diceRoll = function (max) {
   return Math.floor(Math.random() * Math.floor(max - 1) + 1);
 };
+
+Game.prototype.active = function (player, monster) {
+  if (player.active == true) {
+    monster.active == false;
+  } else {
+    monster.active == true;
+  }
+  return;
+};
+
+// Player.prototype.isActive = function () {
+
+//     if(player1 != player2 && player1 == 1){
+//     activePlayer = player1;
+//     }else{
+//     activePlayer = player2;
+//     }
+//     return activePlayer;
+// };
+// function Player(score, activePlayer) {
+//     this.score = score;
+//     this.activePlayer = activePlayer;
+// }
+// $("document").ready(function() {
+//     let player1 = new Player(0, true);
+//     let player2 = new Player(0, false);

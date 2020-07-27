@@ -9,8 +9,10 @@ $(document).ready(function () {
     $('#win').text(win);
 
     $('#roulette-form').submit(function (event) {
-        event.preventDefault();  
-        $('#solution').append("<li>" + "triggers the gun" + "</li>");
+        event.preventDefault();   
+        // $('#solution').append("<li>" + "triggers the gun" + "</li>");
+       roulette(win);
+  
         // var output = roulette(goal);
         // output.forEach(function (element) {
         //     $('#solution').append("<li>" + element + "</li>");

@@ -1,15 +1,11 @@
-export function roulette(goal) {
-  var output = [];
-  for (var i = 1; i <= goal; i++) {
-      if (i % 15 === 0) {
-          output.push("ping-pong");
-      } else if (i % 3 === 0) {
-          output.push("ping");
-      } else if (i % 5 === 0) {
-          output.push("pong");
-      } else {
-          output.push(i);
-        }
+import $ from 'jquery';
+
+export function roulette(input) {
+    var random = Math.ceil(Math.random() * 6);
+if (input === random) {
+    $('#solution').append("<li>" + "you lose" + "</li>");   
+  } else{
+      $('#solution').append("<li>" + "phew" + "</li>"); 
   }
-return output;
+
 }
